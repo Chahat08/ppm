@@ -58,10 +58,27 @@ std::map<std::string, std::string> getImageHeadersAsMap(std::string filePath) {
 		lines++;
 	}
 
-	for (auto x : headers) {
-		std::cout << x.first << ": " << x.second << std::endl;
-	}
 	return headers;
+}
+
+std::string getMagicNumber(std::string filePath) {
+	std::map<std::string, std::string> headers = getImageHeadersAsMap(filePath);
+	return std::stoi(headers["magic number"]);
+}
+
+int getImageWidth(std::string filePath) {
+	std::map<std::string, std::string> headers = getImageHeadersAsMap(filePath);
+	return std::stoi(headers["width"]);
+}
+
+int getImageHeight(std::string filePath) {
+	std::map<std::string, std::string> headers = getImageHeadersAsMap(filePath);
+	return std::stoi(headers["height"]);
+}
+
+int getImageMaxVal(std::string filePath) {
+	std::map<std::string, std::string> headers = getImageHeadersAsMap(filePath);
+	return std::stoi(headers["maxVal"]);
 }
 
 int main() {
