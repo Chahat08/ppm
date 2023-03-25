@@ -1,5 +1,5 @@
 #include "image.h"
-#include "utils.cpp"
+#include "utils.h"
 
 void Image::printImageOnConsole() {
 	for (char c : imageData) std::cout << c;
