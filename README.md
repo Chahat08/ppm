@@ -1,2 +1,2 @@
 # ppm
-For working with Pixel Pixel Map images!
+For working with Portable Pixel Map images!
